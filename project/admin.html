@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Admin | FM Clothing</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">FM Clothing</a>
+    <nav class="nav-links">
+      <a href="products.html">View Store</a>
+      <a href="admin.html" class="active">Admin</a>
+    </nav>
+  </header>
+
+  <section class="admin-wrapper">
+
+    <!-- LEFT -->
+    <div class="admin-card">
+      <h2>Add / Edit Product</h2>
+      <p class="admin-subtitle">Manage your store products</p>
+
+      <form id="adminForm" class="admin-form">
+        <input type="hidden" id="editIndex">
+
+        <div class="form-group">
+          <label>Product Name</label>
+          <input type="text" id="name" required>
+        </div>
+
+        <div class="form-group">
+          <label>Price (₹)</label>
+          <input type="number" id="price" required>
+        </div>
+
+        <div class="form-group">
+          <label>Description</label>
+          <textarea id="description" rows="4" placeholder="Enter product description" required></textarea>
+        </div>
+
+
+        <div class="form-group">
+  <label>Product Images</label>
+  <input
+    type="file"
+    id="images"
+    accept="image/*"
+    multiple
+    required
+  >
+</div>
+
+
+
+        <button class="btn admin-btn" type="submit">Save Product</button>
+      </form>
+
+      <!-- LIVE PREVIEW -->
+      <div class="preview">
+        <h4>Live Preview</h4>
+        <div class="card preview-card">
+          <img id="previewImg" src="https://via.placeholder.com/300x400">
+          <h3 id="previewName">Product Name</h3>
+          <p id="previewPrice">₹0</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="admin-list">
+      <h3>All Products</h3>
+      <div id="productList"></div>
+
+      <button class="reset-btn" onclick="resetProducts()">Reset All Products</button>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2026 FM Clothing · Admin Panel</p>
+  </footer>
+
+  <script src="js/admin.js"></script>
+</body>
+
+</html>

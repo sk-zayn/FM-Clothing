@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Details | FM Clothing</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="logo">FM Clothing</a>
+  <nav class="nav-links">
+    <a href="products.html">Shop</a>
+    <a href="cart.html">Cart</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
+
+<section class="product-detail-wrapper">
+  <div class="product-detail-card">
+    <div class="product-image">
+      <img id="detailImage"
+        onerror="this.src='https://via.placeholder.com/400x500?text=FM+Clothing'">
+    </div>
+
+    <div class="product-info">
+      <h2 id="detailName"></h2>
+      <p class="price" id="detailPrice"></p>
+
+      <div id="product-detail"></div>
+      <div class="qty-detail">
+        <button onclick="changeQty(-1)">−</button>
+        <span id="qty">1</span>
+        <button onclick="changeQty(1)">+</button>
+      </div>
+
+      <button class="btn" onclick="addToCart()">Add to Cart</button>
+      <a href="products.html" class="back-btn">← Back to Products</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 FM Clothing</p>
+</footer>
+
+<script src="js/product-detail.js"></script>
+</body>
+</html>
+
